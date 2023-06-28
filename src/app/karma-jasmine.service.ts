@@ -104,4 +104,19 @@ convertirEnArray(cadena: string): string[] {
   return Array.from(cadena);
 }
 
+// Función para calcular la suma de los dígitos de un número
+sumaDigitos(numero: number): number {
+  let suma = 0;
+  // if (numero < 0){
+  //   numero *= -1
+  // }
+  const numeroString = numero.toString();
+
+  for (let i = 0; i < numeroString.length; i++) {
+    suma += parseInt(numeroString[i]);
+  }
+
+  return suma;
+}
+
 }

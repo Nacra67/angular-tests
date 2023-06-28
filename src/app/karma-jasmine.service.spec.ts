@@ -210,4 +210,18 @@ describe('KarmaJasmineService', () => {
     const resultado = service.convertirEnArray(cadena);
     expect(resultado).toEqual(array)
   })
+
+  //suma digitos de un numero
+  it('deveria sumar los digitos de un numero', () => {
+    const resultado = service.sumaDigitos(12);;
+    expect(resultado).toEqual(3)
+  })
+  it('deveria dar NaN al intentar sumar los digitos de un numero negativo', () => {
+    const resultado = service.sumaDigitos(-12);;
+    expect(resultado).toEqual(NaN)
+  })
+  it('deveria sumar los digitos de un numero mas largo', () => {
+    const resultado = service.sumaDigitos(1232);;
+    expect(resultado).toEqual(8)
+  })
 });
