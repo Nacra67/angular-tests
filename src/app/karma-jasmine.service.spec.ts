@@ -197,9 +197,17 @@ describe('KarmaJasmineService', () => {
   })
 
   //Promedio array
-  it('deberian no encontrar "Estas" en la cadena MAYUS', () => {
+  it('deberian calcular el primedio de un array de numeros', () => {
     const numeros = [5, 10, 15, 20];
     const resultado = service.promedio(numeros);
     expect(resultado).toBe(12.5)
+  })
+
+  //Array de Caracteres
+  it('deveria dividir string en array', () => {
+    const cadena = "Hola";
+    const array = ["H", "o", "l", "a"]
+    const resultado = service.convertirEnArray(cadena);
+    expect(resultado).toEqual(array)
   })
 });

@@ -99,4 +99,9 @@ promedio(array: number[]): number {
   return promedio;
 }
 
+// Función para convertir una cadena en un array de caracteres
+convertirEnArray(cadena: string): string[] {
+  return Array.from(cadena);
+}
+
 }
