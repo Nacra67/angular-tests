@@ -87,4 +87,16 @@ substring(cadena: string, substring: string): boolean {
   return cadena.includes(substring);
 }
 
+// Función para obtener el promedio de un array de números
+promedio(array: number[]): number {
+  if (array.length === 0) {
+    return 0;
+  }
+  
+  const suma = array.reduce((total, num) => total + num, 0);
+  const promedio = suma / array.length;
+  
+  return promedio;
+}
+
 }

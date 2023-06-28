@@ -195,4 +195,11 @@ describe('KarmaJasmineService', () => {
     const resultado = service.substring(cadena, substring);
     expect(resultado).toBe(false)
   })
+
+  //Promedio array
+  it('deberian no encontrar "Estas" en la cadena MAYUS', () => {
+    const numeros = [5, 10, 15, 20];
+    const resultado = service.promedio(numeros);
+    expect(resultado).toBe(12.5)
+  })
 });
