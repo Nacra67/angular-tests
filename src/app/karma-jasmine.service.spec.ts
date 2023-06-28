@@ -111,6 +111,44 @@ describe('KarmaJasmineService', () => {
     const resultado = service.factorial(0)
     expect(resultado).toBe(1)
   })
-  
+  //PRIMOS
+  it('deberia decir true si es primo con un primo', () =>{
+    const resultado = service.primos(13)
+    expect(resultado).toBe(true)
+  })
+  it('deberia decir false con 4', () =>{
+    const resultado = service.primos(4)
+    expect(resultado).toBe(false)
+  })
+  it('deberia decir true con 211', () =>{
+    const resultado = service.primos(211)
+    expect(resultado).toBe(true)
+  })
+  //Mayusculas
+  it('deberia devolver la palabla en mayusculas para palabra en minusculas', () =>{
+    const resultado = service.mayusculas("pan")
+    expect(resultado).toBe("PAN")
+  })
+  it('deberia devolver la palabla en mayusculas para palabra en mayusculas', () =>{
+    const resultado = service.mayusculas("LANGOSTA")
+    expect(resultado).toBe("LANGOSTA")
+  })
+  it('deberia devolver la palabla en mayusculas para palabra en mixta', () =>{
+    const resultado = service.mayusculas("Atun")
+    expect(resultado).toBe("ATUN")
+  })
+  //MAXIMO
+  it('deberia escoger el primer numero', () =>{
+    const resultado = service.maximo(5,4)
+    expect(resultado).toBe(5)
+  })
+  it('deberia escoger el segundo numero', () =>{
+    const resultado = service.maximo(3,7)
+    expect(resultado).toBe(7)
+  })
+  it('deberian ser iguales', () =>{
+    const resultado = service.maximo(6,6)
+    expect(resultado).toBe(6)
+  })
 
 });

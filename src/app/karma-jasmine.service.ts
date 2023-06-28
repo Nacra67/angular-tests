@@ -41,6 +41,30 @@ export class KarmaJasmineService {
       return resultado;
     }
   }
+  // funcion apra saber si un numero es primo
+  primos(numero: number): boolean {
+    for (var i = 2; i <= numero / 2 + 2; i++) {
 
+      if (i > numero / 2) {
+        return true
+      }
+      if (numero % i == 0) {
+        return false
+      }
+    }
+
+  }
+  //   Función para obtener el máximo de dos números
+  maximo(a: number, b: number): number {
+    if (a >= b) {
+      return a
+    }
+    return b
+  }
+
+  // Función para convertir una cadena a mayúsculas
+  mayusculas(texto: string): string {
+    return texto.toUpperCase();
+  }
 
 }
