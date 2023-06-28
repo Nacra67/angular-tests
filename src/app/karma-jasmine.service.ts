@@ -43,15 +43,19 @@ export class KarmaJasmineService {
   }
   // funcion apra saber si un numero es primo
   primos(numero: number): boolean {
-    for (var i = 2; i <= numero / 2 + 2; i++) {
-
-      if (i > numero / 2) {
-        return true
-      }
-      if (numero % i == 0) {
-        return false
+    if (numero < 2) {
+      return false;
+    }
+  
+    const limite = Math.ceil(Math.sqrt(numero));
+  
+    for (var i = 2; i <= limite; i++) {
+      if (numero % i === 0) {
+        return false;
       }
     }
+  
+    return true;
 
   }
   //   Función para obtener el máximo de dos números
