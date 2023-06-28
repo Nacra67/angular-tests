@@ -135,5 +135,10 @@ anagrama(cadena1: string, cadena2: string): boolean {
   return true;
 }
 // Función para calcular el área de un polígono regular(apotema, longitud_lado, numero_lados)
+areaPoligonoRegular(apotema: number, longitudLado: number, numeroLados: number): number {
+  const area = (apotema * longitudLado * numeroLados) / 2;
+  return area;
+}
+
 // Función para encontrar la moda (valor más frecuente) en un array de números
 }

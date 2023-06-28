@@ -213,15 +213,15 @@ describe('KarmaJasmineService', () => {
 
   //suma digitos de un numero
   it('deveria sumar los digitos de un numero', () => {
-    const resultado = service.sumaDigitos(12);;
+    const resultado = service.sumaDigitos(12);
     expect(resultado).toEqual(3)
   })
   it('deveria dar NaN al intentar sumar los digitos de un numero negativo', () => {
-    const resultado = service.sumaDigitos(-12);;
+    const resultado = service.sumaDigitos(-12);
     expect(resultado).toEqual(NaN)
   })
   it('deveria sumar los digitos de un numero mas largo', () => {
-    const resultado = service.sumaDigitos(1232);;
+    const resultado = service.sumaDigitos(1232);
     expect(resultado).toEqual(8)
   })
 
@@ -229,20 +229,26 @@ describe('KarmaJasmineService', () => {
   it('deveria true si es un anagrama', () => {
     const cadena1 = "aaa bbb"
     const cadena2 = "bababa"
-    const resultado = service.anagrama(cadena1, cadena2);;
+    const resultado = service.anagrama(cadena1, cadena2);
     expect(resultado).toEqual(true)
   })
   it('deveria true a pesar de que no es un anagrama ERROR', () => {
     const cadena1 = "aaa bbb"
     const cadena2 = "bababaz"
-    const resultado = service.anagrama(cadena1, cadena2);;
+    const resultado = service.anagrama(cadena1, cadena2);
     expect(resultado).toEqual(true)
   })
   it('deveria false si no es un anagrama', () => {
     const cadena1 = "aaa bbb"
     const cadena2 = "baccba"
-    const resultado = service.anagrama(cadena1, cadena2);;
+    const resultado = service.anagrama(cadena1, cadena2);
     expect(resultado).toEqual(false)
+  })
+
+  //area poligono regular
+  it('deveria area de poligono regular', () => {
+    const resultado = service.areaPoligonoRegular(2,2,2);
+    expect(resultado).toBe(4)
   })
 
 });
