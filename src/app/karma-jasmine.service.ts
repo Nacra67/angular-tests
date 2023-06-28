@@ -119,4 +119,21 @@ sumaDigitos(numero: number): number {
   return suma;
 }
 
+// Función para verificar si una cadena es un anagrama de otra(mismas letras pero distintas posiciones)
+anagrama(cadena1: string, cadena2: string): boolean {
+  const cadena1SinEspacios = cadena1.split(' ').join('').toLowerCase();
+  const cadena2SinEspacios = cadena2.split(' ').join('').toLowerCase();
+  const array1 = Array.from(cadena1SinEspacios).sort();
+  const array2 = Array.from(cadena2SinEspacios).sort();
+
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+// Función para calcular el área de un polígono regular(apotema, longitud_lado, numero_lados)
+// Función para encontrar la moda (valor más frecuente) en un array de números
 }
