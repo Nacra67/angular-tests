@@ -165,4 +165,16 @@ describe('KarmaJasmineService', () => {
     expect(resultado).toBe(false)
   })
 
+  //numero elementos array
+  it('deberian decir 4 alementos en el array', () =>{
+    const array = [1, 2, 3, 4];
+    const resultado = service.numeroElementos(array)
+    expect(resultado).toBe(4)
+  })
+  it('deberian decir 4 alementos en el array', () =>{
+    const array = ["1", "2", "3","4","5"];
+    const resultado = service.numeroElementos(array)
+    expect(resultado).toBe(5)
+  })
+
 });
