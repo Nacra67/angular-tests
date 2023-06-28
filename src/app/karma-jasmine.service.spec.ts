@@ -76,41 +76,41 @@ describe('KarmaJasmineService', () => {
     expect(resultado).toBe(-2);
   });
   //PALINDROMOS
-  it('deberia decir si ava es palindromo o no'), () =>{
+  it('deberia decir si ava es palindromo o no', () =>{
     const resultado = service.esPalindromo("ava")
     expect(resultado).toBe(true)
-  }
-  it('deberia decir si patata es palindromo o no'), () =>{
+  })
+  it('deberia decir si patata es palindromo o no', () =>{
     const resultado = service.esPalindromo("patata")
     expect(resultado).toBe(false)
-  }
+  })
 
   // PARES
-  it('deberia decir si 7 es par'), () =>{
+  it('deberia decir si 7 es par', () =>{
     const resultado = service.esPar(7)
     expect(resultado).toBe(false)
-  }
-  it('deberia decir si 6 es par'), () =>{
+  })
+  it('deberia decir si 6 es par', () =>{
     const resultado = service.esPar(6)
     expect(resultado).toBe(true)
-  }
-  it('deberia decir si -4 es par'), () =>{
+  })
+  it('deberia decir si -4 es par', () =>{
     const resultado = service.esPar(-4)
     expect(resultado).toBe(true)
-  }
+  })
   //FACTORIAL
-  it('deberia calcular el factorial de un numero positivo'), () =>{
+  it('deberia calcular el factorial de un numero positivo', () =>{
     const resultado = service.factorial(4)
     expect(resultado).toBe(24)
-  }
-  it('deberia calcular el factorial de un numero negativo'), () =>{
-    const resultado = service.factorial(-5)
+  })
+  it('deberia calcular el factorial de un numero positivo', () =>{
+    const resultado = service.factorial(5)
     expect(resultado).toBe(120)
-  }
-  it('deberia calcular el factorial de 0'), () =>{
+  })
+  it('deberia calcular el factorial de 0', () =>{
     const resultado = service.factorial(0)
     expect(resultado).toBe(1)
-  }
+  })
   
 
 });
