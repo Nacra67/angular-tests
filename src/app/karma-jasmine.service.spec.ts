@@ -151,4 +151,18 @@ describe('KarmaJasmineService', () => {
     expect(resultado).toBe(6)
   })
 
+  //Positivo?
+  it('deberian dar un true con un positivo', () =>{
+    const resultado = service.positivo(5)
+    expect(resultado).toBe(true)
+  })
+  it('deberian dar un false con un negativo', () =>{
+    const resultado = service.positivo(-5)
+    expect(resultado).toBe(false)
+  })
+  it('deberian dar false con0, no?', () =>{
+    const resultado = service.positivo(0)
+    expect(resultado).toBe(false)
+  })
+
 });

@@ -71,4 +71,20 @@ export class KarmaJasmineService {
     return texto.toUpperCase();
   }
 
+
+//    Función para verificar si un número es positivo
+positivo(numero: number): boolean {
+  return numero > 0;
+}
+
+// Función para obtener el número de elementos en un array
+numeroElementos(array: any[]): number {
+  return array.length;
+}
+
+// Función para verificar si una cadena contiene un substring
+substring(cadena: string, substring: string): boolean {
+  return cadena.includes(substring);
+}
+
 }
