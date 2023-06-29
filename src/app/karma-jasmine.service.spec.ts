@@ -257,5 +257,11 @@ describe('KarmaJasmineService', () => {
     const resultado = service.calcularDias(fechaInicial, fechaFinal);
     expect(resultado).toBe(40);
   })
+  it('deberia devolver la diferencia de dias entre 2 fechas', () => {
+    const fechaInicial = new Date(2023, 2, 1); // 1 de enero de 2023
+    const fechaFinal = new Date(2023, 1, 10); // 10 de febrero de 2023
+    const resultado = service.calcularDias(fechaInicial, fechaFinal);
+    expect(resultado).toBe(-19);
+  })
 
 });
