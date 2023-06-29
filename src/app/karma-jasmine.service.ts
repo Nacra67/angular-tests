@@ -141,4 +141,15 @@ areaPoligonoRegular(apotema: number, longitudLado: number, numeroLados: number):
 }
 
 // Función para encontrar la moda (valor más frecuente) en un array de números
+// Función para encontrar el número duplicado en un array de números:
+// Función para calcular el número de días entre dos fechas:
+calcularDias(fechaInicial: Date, fechaFinal: Date): number {
+  const unDia = 24 * 60 * 60 * 1000;
+
+  const diferencia = fechaFinal.getTime() - fechaInicial.getTime();
+
+  const diferenciaDias = Math.floor(diferencia / unDia);
+
+  return diferenciaDias;
+}
 }
